@@ -3,15 +3,15 @@ node_js: - 15
 cache:
   directories: -node_modules
   #This is our pipeline
-#   script:
-#     - npm test
-#     - npm run author
+  script:
+    - npm test
+    - npm run author
 
-# before_deploy:
-#   - npm build
+before_deploy:
+  - npm build
 
-# deploy:
-#   provider: script
-#   script: echo 'Add deployment command'
-#   on:
-#     branch: main
+deploy:
+  provider: script
+  script: echo 'Add deployment command'
+  on:
+    branch: main
